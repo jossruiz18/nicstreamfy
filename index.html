@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Streamfy Nic</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: #ffffff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            color: #2c3e50;
+        }
+
+        .plans {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .plan {
+            background: #f8f9fa;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 280px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 1px solid #e9ecef;
+        }
+
+        .plan:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .plan img {
+            width: 120px;
+            margin-bottom: 15px;
+        }
+
+        .plan h2 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #495057;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+
+        .contact-btn {
+            margin-top: 40px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 30px;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .contact-btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            margin-top: auto;
+            font-size: 0.9rem;
+            color: #6c757d;
+            padding: 15px 0;
+        }
+        .btn-whatsapp {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 25px;
+            background-color: #007bff;
+            color: white;
+            font-weight: 700;
+            border-radius: 25px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+            transition: background-color 0.3s ease;
+        }
+        .btn-whatsapp:hover {
+            background-color: #0056b3;
+        }
+        .socials {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .socials a img {
+            width: 40px;
+            height: 40px;
+            filter: drop-shadow(0 0 3px rgba(0,0,0,0.2));
+            transition: filter 0.3s ease;
+        }
+        .socials a:hover img {
+            filter: drop-shadow(0 0 8px #007bff);
+        }
+    </style>
+</head>
+<body>
+    <header>Streamfy Nic</header>
+    <section class="plans">
+        <div class="plan" id="spotify">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Logo" />
+            <h2>Spotify Premium</h2>
+            <p>Acceso ilimitado a música sin anuncios.</p>
+            <div class="price" style="color: #1DB954; font-weight: 700;">115 Córdobas</div>
+            <a class="btn-whatsapp" href="https://api.whatsapp.com/send?phone=50582368117&text=Hola%20quiero%20más%20información%20sobre%20Spotify%20Premium%20en%20Streamfy%20Nic" target="_blank" rel="noopener noreferrer">Comprar</a>
+        </div>
+        <div class="plan" id="netflix">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" />
+            <h2>Netflix Premium</h2>
+            <p>Series y películas en alta calidad.</p>
+            <div class="price" style="color: #E50914; font-weight: 700;">150 Córdobas</div>
+            <a class="btn-whatsapp" href="https://api.whatsapp.com/send?phone=50582368117&text=Hola%20quiero%20más%20información%20sobre%20Netflix%20Premium%20en%20Streamfy%20Nic" target="_blank" rel="noopener noreferrer">Comprar</a>
+        </div>
+        <div class="plan" id="max">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="HBO Max Logo" />
+            <h2>HBO Max</h2>
+            <p>Películas y series exclusivas.</p>
+            <div class="price" style="color: #5A2D82; font-weight: 700;">100 Córdobas</div>
+            <a class="btn-whatsapp" href="https://api.whatsapp.com/send?phone=50582368117&text=Hola%20quiero%20más%20información%20sobre%20HBO%20Max%20en%20Streamfy%20Nic" target="_blank" rel="noopener noreferrer">Comprar</a>
+        </div>
+        <div class="plan" id="crunchyroll">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Crunchyroll_Logo.svg" alt="Crunchyroll Logo" />
+            <h2>Crunchyroll Premium</h2>
+            <p>Anime y series asiáticas sin límites.</p>
+            <div class="price" style="color: #F47A20; font-weight: 700;">80 Córdobas</div>
+            <a class="btn-whatsapp" href="https://api.whatsapp.com/send?phone=50582368117&text=Hola%20quiero%20más%20información%20sobre%20Crunchyroll%20Premium%20en%20Streamfy%20Nic" target="_blank" rel="noopener noreferrer">Comprar</a>
+        </div>
+        <div class="plan" id="amazon-prime">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" alt="Amazon Prime Video" />
+
+            <h2>Amazon Prime Video</h2>
+            <p>Películas, series y más con Prime.</p>
+            <div class="price" style="color: #00A8E1; font-weight: 700;">100 Córdobas</div>
+            <a class="btn-whatsapp" href="https://api.whatsapp.com/send?phone=50582368117&text=Hola%20quiero%20más%20información%20sobre%20Amazon%20Prime%20Video%20en%20Streamfy%20Nic" target="_blank" rel="noopener noreferrer">Comprar</a>
+        </div>
+        <div class="plan" id="disney">
+           <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney+" />
+
+            <h2>Disney+</h2>
+            <p>Contenido familiar y exclusivos.</p>
+            <div class="price" style="color: #113ccf; font-weight: 700;">130 Córdobas</div>
+            <a class="btn-whatsapp" href="https://api.whatsapp.com/send?phone=50582368117&text=Hola%20quiero%20más%20información%20sobre%20Disney%2B%20en%20Streamfy%20Nic" target="_blank" rel="noopener noreferrer">Comprar</a>
+        </div>
+        <div class="plan" id="ultra-combo" style="display: flex; flex-direction: column; align-items: center;">
+            <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Logo" style="width: 60px; vertical-align: middle;" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" style="width: 60px; vertical-align: middle;" />
+            </div>
+            <h2>Ultra Combo</h2>
+            <div class="price" style="color: #113ccf; font-weight: 700;">150 Córdobas</div>
+            <a class="btn-whatsapp" href="https://api.whatsapp.com/send?phone=50582368117&text=Hola%20quiero%20más%20información%20sobre%20Ultra%20Combo%20en%20Streamfy%20Nic" target="_blank" rel="noopener noreferrer">Contactar</a>
+        </div>
+    </section>
+    <div class="tagline">
+        <p>Disfruta del mejor streaming con calidad y precio justo.</p>
+        <p>Tu entretenimiento, nuestra prioridad.</p>
+        <p>Conéctate y vive la experiencia Streamfy Nic.</p>
+        <p>Solo en Streamfy Nic donde pagas menos y difrutas más</p>
+    </div>
+    <div class="socials">
+        <a href="https://instagram.com/streamfy.nic" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" />
+        </a>
+        <a href="https://www.facebook.com/StreamfyNic" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=50582368117" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+        </a>
+    </div>
+    <a class="contact-btn" href="https://api.whatsapp.com/send?phone=50582368117&text=Hola%20quiero%20más%20información%20sobre%20Streamfy%20Nic" target="_blank" rel="noopener noreferrer">
+        Contactar por WhatsApp
+    </a>
+    <footer>
+        &copy; 2025 Streamfy Nic - Contacto: 505 82368117
+    </footer>
+    <script>
+        // Simple dynamic effect: highlight plan on click
+        const plans = document.querySelectorAll('.plan');
+        plans.forEach(plan => {
+            plan.addEventListener('click', () => {
+                plans.forEach(p => p.style.boxShadow = '0 8px 20px rgba(0,0,0,0.3)');
+                plan.style.boxShadow = '0 15px 30px rgba(29, 185, 84, 0.9)';
+            });
+        });
+    </script>
+</body>
+</html>
